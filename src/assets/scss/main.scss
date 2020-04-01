@@ -33,8 +33,8 @@
 
 		.body.is-loading {
 			*, *:before, *:after {
-				@include vendor('animation', 'none !important');
-				@include vendor('transition', 'none !important');
+				@include vendor('animation', 'none');
+				@include vendor('transition', 'none');
 			}
 		}
 	}
@@ -999,11 +999,10 @@
 		#header {
 			.inner {
 				@include vendor('transform', 'scale(1.05)');
-				opacity: 0;
-
+				
 				.actions {
 					@include vendor('transform', 'translateY(30em)');
-					opacity: 0;
+					
 				}
 			}
 

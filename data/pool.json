@@ -1,0 +1,13 @@
+{
+  "explorerLink": "https://shelleyexplorer.cardano.org/en/stake-pool/f43275bf7f178f5493ef4d5cfc35f6d944d7e65e3e09cf51791aec46e653dad2/",
+  "wallets": [
+    "https://daedaluswallet.io/",
+    "https://yoroi-wallet.com"
+  ],
+  "info": {
+    "title": "Welcome to ACE POOL",
+    "description": "Our mission is ",
+    "image": "images/home-logo.png"
+  },
+  "logo": "images/logo.png"
+}

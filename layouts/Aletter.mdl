@@ -1,0 +1,75 @@
+mdl 1.3;
+import ::adobe::mtl::standard;
+import ::adobe::util::*;
+import ::tex::gamma_mode;
+
+export material A Front Inflation Material(*)
+ = ::adobe::mtl::standard(
+	baseColor : color(0.117650, 0.247070, 0.352940),
+	interiorColor : color(0.803922, 0.803922, 0.803922),
+	roughness : float(0.333333),
+	translucence : float(0.000000),
+	indexOfRefraction : float(1.000000),
+	metallic : float(0.080000),
+	density : float(0.000000),
+	glow : float(0.000000),
+	opacity : float(1.000000),
+	heightScale : float(1.000000)
+);
+
+export material A Front Bevel Material(*)
+ = ::adobe::mtl::standard(
+	baseColor : color(0.117650, 0.247070, 0.352940),
+	interiorColor : color(0.803922, 0.803922, 0.803922),
+	roughness : float(0.333333),
+	translucence : float(0.000000),
+	indexOfRefraction : float(1.000000),
+	metallic : float(0.080000),
+	density : float(0.000000),
+	glow : float(0.000000),
+	opacity : float(1.000000),
+	heightScale : float(1.000000)
+);
+
+export material A Extrusion Material(*)
+ = ::adobe::mtl::standard(
+	baseColor : color(0.117650, 0.247070, 0.352940),
+	interiorColor : color(0.803922, 0.803922, 0.803922),
+	roughness : float(0.333333),
+	translucence : float(0.000000),
+	indexOfRefraction : float(1.000000),
+	metallic : float(0.080000),
+	density : float(0.000000),
+	glow : float(0.000000),
+	opacity : float(1.000000),
+	heightScale : float(1.000000)
+);
+
+export material A Back Bevel Material(*)
+ = ::adobe::mtl::standard(
+	baseColor : color(0.117650, 0.247070, 0.352940),
+	interiorColor : color(0.803922, 0.803922, 0.803922),
+	roughness : float(0.333333),
+	translucence : float(0.000000),
+	indexOfRefraction : float(1.000000),
+	metallic : float(0.080000),
+	density : float(0.000000),
+	glow : float(0.000000),
+	opacity : float(1.000000),
+	heightScale : float(1.000000)
+);
+
+export material A Back Inflation Material(*)
+ = ::adobe::mtl::standard(
+	baseColor : color(0.117650, 0.247070, 0.352940),
+	interiorColor : color(0.803922, 0.803922, 0.803922),
+	roughness : float(0.333333),
+	translucence : float(0.000000),
+	indexOfRefraction : float(1.000000),
+	metallic : float(0.080000),
+	density : float(0.000000),
+	glow : float(0.000000),
+	opacity : float(1.000000),
+	heightScale : float(1.000000)
+);
+
