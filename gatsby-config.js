@@ -42,11 +42,9 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-google-tagmanager',
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        id: 'UA-19969281-5',
-        includeInDevelopment: false,
-        defaultDataLayer: { platform: 'gatsby' }
+        trackingId: 'UA-19969281-5'
       }
     }
   ]
