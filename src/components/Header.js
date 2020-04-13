@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
+import '~/assets/scss/head.scss';
 
 const Header = ({ data }) => {
-  const { title, description, image } = data;
+  const { title, description } = data;
 
   return (
     <section id="header">
       <div className="inner">
         <div className="imageContainer">
-          <Img fluid={image.childImageSharp.fluid} />
+          <Img fluid={data.image.childImageSharp.fluid} />
         </div>
         <h1>{title}</h1>
         <p>{description}</p>

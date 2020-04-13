@@ -40,6 +40,14 @@ module.exports = {
         name: 'data',
         path: `${__dirname}/data/`
       }
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'UA-19969281-5',
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: 'gatsby' }
+      }
     }
   ]
 };

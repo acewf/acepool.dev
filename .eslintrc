@@ -1,7 +1,5 @@
 {
-	"extends": [
-		"eslint-config-airbnb"
-	],
+	"extends": "eslint-config-airbnb",
 	"settings": {
 		"import/core-modules": [],
 		"import/resolver": {
@@ -16,6 +14,9 @@
 	"plugins": [
 		"react-hooks"
 	],
+	"globals": {
+		"System": true
+	},
 	"rules": {
 		"react/jsx-filename-extension": 0,
 		"react/sort-comp": 0,
@@ -79,7 +80,6 @@
 					"var"
 				]
 			}
-		],
-		"react-hooks/rules-of-hooks": "error"
+		]
 	}
 }

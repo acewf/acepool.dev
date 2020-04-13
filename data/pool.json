@@ -5,9 +5,13 @@
     "https://yoroi-wallet.com"
   ],
   "info": {
-    "title": "Welcome to ACE POOL",
-    "description": "Our mission is ",
+    "title": "Welcome to AcePool",
+    "description": "This pool exists to help cardano ecosystem while offering a competitive low fee",
     "image": "images/home-logo.png"
+  },
+  "about": {
+    "heading": "About this pool",
+    "description": "AcePool - Ticker ACEP - Aims for having a high performance and secure node that can process transactions on the CARDANO Blockchain."
   },
   "logo": "images/logo.png"
 }

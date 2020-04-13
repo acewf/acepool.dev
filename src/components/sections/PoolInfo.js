@@ -1,23 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import pic01 from '../../assets/images/pic01.jpg';
 
-const PoolInfo = () => (
+const PoolInfo = ({ title, description }) => (
   <section id="one" className="main style1">
     <div className="grid-wrapper">
       <div className="col-6">
         <header className="major">
           <h2>
-            Lorem ipsum dolor adipiscing
-            <br />
-            amet dolor consequat
+            {title}
           </h2>
         </header>
         <p>
-          Adipiscing a commodo ante nunc accumsan et interdum mi ante
-          adipiscing. A nunc lobortis non nisl amet vis sed volutpat
-          aclacus nascetur ac non. Lorem curae et ante amet sapien sed
-          tempus adipiscing id accumsan.
+          {description}
         </p>
       </div>
       <div className="col-6">
@@ -28,5 +24,16 @@ const PoolInfo = () => (
     </div>
   </section>
 );
+
+PoolInfo.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string
+};
+
+PoolInfo.defaultProps = {
+  title: '',
+  description: ''
+};
+
 
 export default PoolInfo;
