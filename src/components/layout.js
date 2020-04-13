@@ -1,40 +1,40 @@
-import React from "react";
-import "../assets/scss/main.scss";
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import '../assets/scss/main.scss';
 
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from './Header';
+import Footer from './Footer';
 
-class Template extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        loading: 'is-loading'
-      }
-    }
+const Layout = ({ children, headerInfo, footerInfo }) => {
+  const [isLoading, setLoadingState] = useState(false);
 
-    componentDidMount () {
-      this.timeoutId = setTimeout(() => {
-          this.setState({loading: ''});
-      }, 100);
-    }
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadingState(true);
+    }, 100);
+  }, []);
 
-    componentWillUnmount () {
-      if (this.timeoutId) {
-          clearTimeout(this.timeoutId);
-      }
-    }
+  const activeClass = isLoading ? 'is-loading' : '';
 
-    render() {
-        const { children } = this.props;
+  return (
+    <div className={`body ${activeClass}`}>
+      <Header data={headerInfo} />
+      {children}
+      <Footer data={footerInfo} />
+    </div>
+  );
+};
 
-        return (
-            <div className={`body ${this.state.loading}`}>
-                <Header />
-                {children}
-                <Footer />
-            </div>
-        );
-    }
-}
+Layout.propTypes = {
+  children: PropTypes.any.isRequired,
+  headerInfo: PropTypes.object,
+  footerInfo: PropTypes.object
+};
 
-export default Template;
+Layout.defaultProps = {
+  headerInfo: {},
+  footerInfo: {}
+};
+
+
+export default Layout;

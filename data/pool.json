@@ -1,0 +1,17 @@
+{
+  "explorerLink": "https://shelleyexplorer.cardano.org/en/stake-pool/f43275bf7f178f5493ef4d5cfc35f6d944d7e65e3e09cf51791aec46e653dad2/",
+  "wallets": [
+    "https://daedaluswallet.io/",
+    "https://yoroi-wallet.com"
+  ],
+  "info": {
+    "title": "Welcome to AcePool",
+    "description": "This pool exists to help cardano ecosystem while offering a competitive low fee",
+    "image": "images/home-logo.png"
+  },
+  "about": {
+    "heading": "About this pool",
+    "description": "AcePool - Ticker ACEP - Aims for having a high performance and secure node that can process transactions on the CARDANO Blockchain."
+  },
+  "logo": "images/logo.png"
+}

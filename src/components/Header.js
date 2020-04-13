@@ -1,22 +1,34 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
+import '~/assets/scss/head.scss';
 
-class Header extends React.Component {
-    render() {
-        return (
-            <section id="header">
-                <div className="inner">
-                    <span className="icon major fa-cloud"></span>
-                    <h1>Hi, I'm <strong>Photon</strong>, another fine<br />
-                    little freebie from <a href="http://html5up.net">HTML5 UP</a>.</h1>
-                    <p>Accumsan feugiat mi commodo erat lorem ipsum, sed magna<br />
-                    lobortis feugiat sapien sed etiam volutpat accumsan.</p>
-                    <ul className="actions">
-                        <li><a href="#one" className="button scrolly">Discover</a></li>
-                    </ul>
-                </div>
-            </section>
-        )
-    }
-}
+const Header = ({ data }) => {
+  const { title, description } = data;
 
-export default Header
+  return (
+    <section id="header">
+      <div className="inner">
+        <div className="imageContainer">
+          <Img fluid={data.image.childImageSharp.fluid} />
+        </div>
+        <h1>{title}</h1>
+        <p>{description}</p>
+        <ul className="actions">
+          <li><a href="#one" className="button scrolly">Discover</a></li>
+        </ul>
+      </div>
+    </section>
+  );
+};
+
+Header.propTypes = {
+  data: PropTypes.object
+};
+
+Header.defaultProps = {
+  data: {}
+};
+
+
+export default Header;
