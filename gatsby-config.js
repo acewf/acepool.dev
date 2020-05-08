@@ -21,10 +21,10 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-starter-default',
-        short_name: 'starter',
+        short_name: 'AcePool',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#4686a0',
+        theme_color: '#4677a0',
         display: 'minimal-ui',
         icon: 'data/images/logo.png' // This path is relative to the root of the site.
       }

@@ -10,8 +10,11 @@
     "image": "images/home-logo.png"
   },
   "about": {
-    "heading": "About this pool",
-    "description": "AcePool - Ticker ACEP - Aims for having a high performance and secure node that can process transactions on the CARDANO Blockchain."
+    "heading": "About AcePool (<strong>ACEP</strong>)",
+    "description": "<p>Deliver a high performance and secure <a href='https://docs.cardano.org/glossary/#node' target='__blank'>node</a>  that can process transactions on the CARDANO Blockchain.</p><p>Although operating in the GMT time zone, the pool offers automated scripts that make keep pool running smoothly. To incentivise the usage of the cardano ecosystem and also staking, this pool has plans to develop applications.</p><p><strong>Jackpot System</strong> - is a way to redistribute ADA rewards, earned by this pool at the end of each <a href='https://docs.cardano.org/glossary/#epoch' target='__blank'>EPOCH</a>. The value for this jackpot will be calculated the difference of the received rewards by pool expenses, and the remaining value will be sent to a random address from the list of delegators.</p>"
   },
-  "logo": "images/logo.png"
+  "logo": "images/logo.png",
+  "stack": {
+    "title": "Pool technology stack"
+  }
 }
