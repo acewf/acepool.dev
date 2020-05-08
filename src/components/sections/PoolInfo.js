@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -8,13 +9,9 @@ const PoolInfo = ({ title, description }) => (
     <div className="grid-wrapper">
       <div className="col-6">
         <header className="major">
-          <h2>
-            {title}
-          </h2>
+          <h2 dangerouslySetInnerHTML={{ __html: title }} />
         </header>
-        <p>
-          {description}
-        </p>
+        <div dangerouslySetInnerHTML={{ __html: description }} />
       </div>
       <div className="col-6">
         <span className="image fit">
