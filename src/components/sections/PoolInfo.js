@@ -1,11 +1,11 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
+import '~/assets/scss/about.scss';
 
-import pic01 from '../../assets/images/pic01.jpg';
-
-const PoolInfo = ({ title, description }) => (
-  <section id="one" className="main style1">
+const PoolInfo = ({ about: { title, description, img } }) => (
+  <section className="main style1 about">
     <div className="grid-wrapper">
       <div className="col-6">
         <header className="major">
@@ -15,7 +15,9 @@ const PoolInfo = ({ title, description }) => (
       </div>
       <div className="col-6">
         <span className="image fit">
-          <img src={pic01} alt="" />
+          <div className="image--block">
+            <Img fluid={img.childImageSharp.fluid} />
+          </div>
         </span>
       </div>
     </div>
@@ -23,13 +25,23 @@ const PoolInfo = ({ title, description }) => (
 );
 
 PoolInfo.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string
+  about: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    img: PropTypes.object
+  })
 };
 
 PoolInfo.defaultProps = {
-  title: '',
-  description: ''
+  about: {
+    title: '',
+    description: '',
+    img: {
+      childImageSharp: {
+        fluid: null
+      }
+    }
+  }
 };
 
 
