@@ -7,7 +7,7 @@ const listOfMetaProperties = [
   { property: 'og:title', key: 'ogTitle' },
   { property: 'og:description', key: 'ogDescription' },
   { property: 'og:type', key: 'ogType' },
-  { property: 'og:image', key: 'ogImage' },
+  { property: 'og:image', key: 'image' },
   { property: 'og:url', key: 'ogUrl' },
   { property: 'og:locale', key: 'ogLocale' },
   { property: 'og:site_name', key: 'siteName' },
