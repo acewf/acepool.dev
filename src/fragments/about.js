@@ -7,6 +7,14 @@ export const PoolAboutFragment = graphql`
       about {
         heading
         description
+        jackpot
+        img{
+          childImageSharp{
+            fluid{
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

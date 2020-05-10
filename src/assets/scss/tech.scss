@@ -1,0 +1,29 @@
+.tech{
+  display: flex;
+
+  & ul{
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    list-style: none;
+
+    & li{
+      margin: 5px 0;
+
+      & span {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .centered--flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-wrapper{
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+  }
+}

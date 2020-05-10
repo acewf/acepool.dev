@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
@@ -13,7 +14,7 @@ const Header = ({ data }) => {
           <Img fluid={data.image.childImageSharp.fluid} />
         </div>
         <h1>{title}</h1>
-        <p>{description}</p>
+        <p dangerouslySetInnerHTML={{ __html: description }} />
         <ul className="actions">
           <li><a href="#one" className="button scrolly">Discover</a></li>
         </ul>
