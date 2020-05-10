@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Question from './Question';
@@ -10,7 +11,7 @@ const PoolData = ({ data: { title, description, questions } }) => (
         <header className="major">
           <h2>{title}</h2>
         </header>
-        <p>{description}</p>
+        <p dangerouslySetInnerHTML={{ __html: description }} />
       </div>
       {questions.map((item) => <Question key={item.id} data={item} />)}
     </div>
