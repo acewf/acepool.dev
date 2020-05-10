@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,7 +18,7 @@ const Question = ({ data: { title, description, icon } }) => (
       </div>
     </span>
     <h3>{title}</h3>
-    <p>{description}</p>
+    <p dangerouslySetInnerHTML={{ __html: description }} />
   </div>
 );
 
