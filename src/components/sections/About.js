@@ -4,21 +4,19 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import '~/assets/scss/about.scss';
 
-const PoolInfo = ({ about: { title, description, img } }) => (
-  <section className="main style1 about">
-    <div className="grid-wrapper">
-      <div className="col-6">
+const PoolInfo = ({ about: { heading, description, img } }) => (
+  <section className="main about">
+    <div className="wrapper">
+      <div className="container">
         <header className="major">
-          <h2 dangerouslySetInnerHTML={{ __html: title }} />
+          <h2 dangerouslySetInnerHTML={{ __html: heading }} />
         </header>
         <div dangerouslySetInnerHTML={{ __html: description }} />
       </div>
-      <div className="col-6">
-        <span className="image fit">
-          <div className="image--block">
-            <Img fluid={img.childImageSharp.fluid} />
-          </div>
-        </span>
+      <div className="image fit">
+        <div className="image--block">
+          <Img fluid={img.childImageSharp.fluid} />
+        </div>
       </div>
     </div>
   </section>
@@ -26,7 +24,7 @@ const PoolInfo = ({ about: { title, description, img } }) => (
 
 PoolInfo.propTypes = {
   about: PropTypes.shape({
-    title: PropTypes.string,
+    heading: PropTypes.string,
     description: PropTypes.string,
     img: PropTypes.object
   })
@@ -34,7 +32,7 @@ PoolInfo.propTypes = {
 
 PoolInfo.defaultProps = {
   about: {
-    title: '',
+    heading: 'Some Title',
     description: '',
     img: {
       childImageSharp: {

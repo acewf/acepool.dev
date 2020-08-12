@@ -15,8 +15,8 @@ const listOfIcons = {
 
 const TechStake = ({ data: { title, info } }) => (
   <section className="main style2 tech">
-    <div className="grid-wrapper">
-      <div className="col-6">
+    <div className="wrapper">
+      <div className="tech__container">
         <header className="major">
           <h2>
             {title}
@@ -32,7 +32,7 @@ const TechStake = ({ data: { title, info } }) => (
           }
         </ul>
       </div>
-      <div className="col-6 centered--flex">
+      <div className="centered--flex">
         <FontAwesomeIcon size="9x" icon={faLayerGroup} />
       </div>
     </div>

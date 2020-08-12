@@ -1,0 +1,34 @@
+{
+    "info": {
+        "url_png_icon_64x64": "https://www.acepool.dev/icons/icon-72x72.png",
+        "url_png_logo": "https://www.acepool.dev/icons/icon-384x384.png",
+        "location": "London, England",
+        "social": {
+            "twitter_handle": "AceStakePool",
+            "telegram_handle": "ACE_POOL",
+            "facebook_handle": "",
+            "youtube_handle": "",
+            "twitch_handle": "",
+            "discord_handle": "",
+            "github_handle": ""
+        },
+        "company": {
+            "name": "Pixelkiller",
+            "city": "London",
+            "country": "England",
+            "company_id": "11166059"
+        },
+        "about": {
+            "me": "Software Developer, pension about Cardano eco system",
+            "server": "VPS with 8gb ram located in europe",
+            "company": "pixelkiller.net"
+        },
+        "rss": "http(s) url to valid RSS feed"
+    },
+    "my-pool-ids": [
+        "1cd122b3ccee22046d1b1dd46a6f3a1d339de527656b88ab55a16ae4"
+    ],
+    "when-satured-then-recommend": [
+        "e29b14719f694767d0faf92f654cf66585bcefd8139bf5a33b7ed181"
+    ]
+}

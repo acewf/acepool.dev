@@ -2,29 +2,37 @@
 @import 'libs/functions';
 @import 'libs/mixins';
 @import "libs/skel";
+@import "breakpoints";
 
 section#header {
   padding: 2em 0 2em 0;
   @include dark(#4686a0);
-  background-attachment:	fixed,							fixed,							fixed;
-  background-image:		url('../images/overlay2.png'),		url('../images/overlay3.svg'),		linear-gradient(45deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 30%, _palette(accent6-alt));
-  background-position:	top left,						center center,					center center;
-  background-size:		auto,							cover,							cover;
+  background-attachment: fixed, fixed, fixed;
+  background-image: url('../images/overlay2.png'), url('../images/overlay3.svg'), linear-gradient(45deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 30%, _palette(accent6-alt));
+  background-position: top left, center center, center center;
+  background-size: auto, cover, cover;
   overflow: hidden;
   position: relative;
   text-align: center;
+
+  grid-column: 1 / span 2;
+  grid-row: 1;
 
   h1 {
     margin: 0;
   }
 
   p {
-    margin: (_size(element-margin) * 0.5) 0 0 0;
+    margin: (_size(element-margin) * 0.5);
   }
 
   .actions {
     margin: (_size(element-margin) * 1.25) 0 0 0;
     position: relative;
+
+    @include breakpoint(large) {
+      display: none;
+    }
 
     &:after {
       background: _palette(dark, border);

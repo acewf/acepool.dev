@@ -6,16 +6,14 @@ import '~/assets/scss/faqs.scss';
 
 const PoolData = ({ data: { title, description, questions } }) => (
   <section className="main style1 special faqs">
-    <div className="wrapper">
-      <div className="title__wrapper">
+    <div className="grid-wrapper">
+      <div className="col-12">
         <header className="major">
           <h2>{title}</h2>
         </header>
         <p dangerouslySetInnerHTML={{ __html: description }} />
       </div>
-      <div className="questions__wrapper">
-        {questions.map((item) => <Question key={item.id} data={item} />)}
-      </div>
+      {questions.map((item) => <Question key={item.id} data={item} />)}
     </div>
   </section>
 );

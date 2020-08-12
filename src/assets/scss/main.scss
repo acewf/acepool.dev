@@ -13,12 +13,12 @@
 */
 
 @include skel-breakpoints((
-	xlarge: '(max-width: 1680px)',
-	large: '(max-width: 1280px)',
-	medium: '(max-width: 980px)',
-	small: '(max-width: 736px)',
-	xsmall: '(max-width: 480px)',
-	xxsmall: '(max-width: 360px)'
+	xlarge: '(min-width: 1680px)',
+	large: '(min-width: 1280px)',
+	medium: '(min-width: 980px)',
+	small: '(min-width: 736px)',
+	xsmall: '(min-width: 480px)',
+	xxsmall: '(min-width: 360px)'
 ));
 
 @include skel-layout((
@@ -223,7 +223,6 @@
 				content: '';
 				display: inline-block;
 				height: 1px;
-				margin-top: (_size(element-margin) * 0.75);
 				width: 6em;
 			}
 
@@ -680,81 +679,6 @@
 		margin: 0 0 _size(element-margin) 0;
 	}
 
-/* Table */
-
-	.table-wrapper {
-		-webkit-overflow-scrolling: touch;
-		overflow-x: auto;
-	}
-
-	table {
-		margin: 0 0 _size(element-margin) 0;
-		width: 100%;
-
-		tbody {
-			tr {
-				border-left: 0;
-				border-right: 0;
-
-				&:nth-child(2n + 1) {
-					background-color: _palette(border-bg);
-				}
-			}
-		}
-
-		td {
-			padding: 0.75em 0.75em;
-		}
-
-		th {
-			color: _palette(fg-bold);
-			font-size: 0.9em;
-			font-weight: _font(weight-bold);
-			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
-		}
-
-		thead {
-			border-bottom: solid 1px _palette(border);
-		}
-
-		tfoot {
-			border-top: solid 1px _palette(border);
-		}
-
-		&.alt {
-			border-collapse: separate;
-
-			tbody {
-				tr {
-					td {
-						border: solid 1px _palette(border);
-						border-left-width: 0;
-						border-top-width: 0;
-
-						&:first-child {
-							border-left-width: 1px;
-						}
-					}
-
-					&:first-child {
-						td {
-							border-top-width: 1px;
-						}
-					}
-				}
-			}
-
-			thead {
-				border-bottom: 0;
-			}
-
-			tfoot {
-				border-top: 0;
-			}
-		}
-	}
-
 /* Button */
 
 	input[type="submit"],
@@ -834,21 +758,6 @@
 		}
 	}
 
-/* Main */
-
-	.main {
-		@include padding(6em, 0);
-
-		&.style1 {
-			background: _palette(bg);
-		}
-
-		&.style2 {
-			@include dark(#333);
-			background-attachment:	fixed, fixed;
-			background-size:		auto, cover;
-		}
-	}
 
 /* Header */
 	.body.is-loading {
@@ -955,16 +864,6 @@
 				}
 			}
 
-		/* Main */
-
-			.main {
-				@include padding(4em, 0);
-
-				&.style2 {
-					background-attachment: scroll;
-				}
-			}
-
 		/* Header */
 
 			#header {
@@ -1003,12 +902,6 @@
 						}
 					}
 				}
-			}
-
-		/* Main */
-
-			.main {
-				@include padding(5em, 3em);
 			}
 
 		/* Header */
@@ -1102,12 +995,6 @@
 				line-height: 3em;
 			}
 
-		/* Main */
-
-			.main {
-				@include padding(3em, 1.5em);
-			}
-
 		/* Header */
 
 			#header {
@@ -1179,12 +1066,6 @@
 				padding: 0;
 			}
 
-		/* Main */
-
-			.main {
-				@include padding(2em, 1.5em);
-			}
-
 		/* Header */
 
 			#header {
@@ -1226,12 +1107,6 @@
 
 			html, body {
 				min-width: 320px;
-			}
-
-		/* Main */
-
-			.main {
-				@include padding(2em, 1em);
 			}
 
 		/* Header */
