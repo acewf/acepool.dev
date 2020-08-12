@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import '../assets/scss/main.scss';
+import '~/assets/scss/layout.scss';
 
 import Header from './Header';
 import Footer from './Footer';
@@ -18,8 +19,10 @@ const Layout = ({ children, headerInfo, footerInfo }) => {
 
   return (
     <div className={`body ${activeClass}`}>
-      <Header data={headerInfo} />
-      {children}
+      <div className="content__wrapper">
+        <Header data={headerInfo} />
+        {children}
+      </div>
       <Footer data={footerInfo} />
     </div>
   );

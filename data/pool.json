@@ -48,7 +48,7 @@
         "id": "id1"
       },
       {
-        "copy": "Linux 18.04",
+        "copy": "Linux 20.04",
         "icon": "ubuntu",
         "id": "id2"
       },
@@ -63,7 +63,7 @@
         "id": "id4"
       },
       {
-        "copy": "Jormungandr v0.8.18-690eb547",
+        "copy": "Cardano node v1.18.0",
         "icon": "node",
         "id": "id5"
       }

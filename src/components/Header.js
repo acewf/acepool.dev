@@ -8,7 +8,7 @@ const Header = ({ data }) => {
   const { title, description } = data;
 
   return (
-    <section id="header">
+    <section id="header" className="header">
       <div className="inner">
         <div className="imageContainer">
           <Img fluid={data.image.childImageSharp.fluid} />

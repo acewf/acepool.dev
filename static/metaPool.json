@@ -1,6 +1,7 @@
 {
-"name": "AcePool",
-"description": "Competitive low fee pool",
-"ticker": "ACEP",
-"homepage": "https://www.acepool.dev"
+  "name": "AcePool",
+  "description": "Competitive low fee pool",
+  "ticker": "ACEP",
+  "homepage": "https://www.acepool.dev",
+  "extended": "https://www.acepool.dev/extended.json"
 }
