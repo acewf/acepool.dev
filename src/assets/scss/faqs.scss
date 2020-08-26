@@ -1,36 +1,6 @@
 @import "breakpoints";
 
 .faqs{
-  grid-column: 2 / span 3;
-  grid-row: 2;
-
-  .wrapper{
-    @include dark(#333);
-    filter: drop-shadow(1px 4px 4px black);
-    margin: 20px;
-    padding: 10px;
-  }
-
-  .image{
-    justify-content: center;
-    align-items: center;
-  }
-  h3{
-    font-size: 1.2em;
-  }
-  span{
-    display: block;
-  }
-  p{
-    font-size: 0.75em;
-  }
-
-  .questions__wrapper{
-    display: flex;
-    flex-direction: column;
-
-    @include breakpoint(medium) {
-      flex-direction: row;
-    }
-  }
+  grid-column: 1 / span 4;
+  grid-row: 3;
 }

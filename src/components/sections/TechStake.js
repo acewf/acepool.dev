@@ -33,7 +33,7 @@ const TechStake = ({ data: { title, info } }) => (
         </ul>
       </div>
       <div className="centered--flex">
-        <FontAwesomeIcon size="9x" icon={faLayerGroup} />
+        <FontAwesomeIcon size="6x" icon={faLayerGroup} />
       </div>
     </div>
   </section>

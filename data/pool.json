@@ -25,11 +25,21 @@
       "Cardano",
       "ADA",
       "blockchain",
-      "itn",
       "ROS",
       "ACE",
-      "Pool",
-      "Operator"
+      "Stake Pool",
+      "Operator",
+      "Rewards",
+      "Recompense",
+      "Delegate",
+      "low fee",
+      "ブロックチェーン",
+      "カルダーノ",
+      "ステークプール",
+      "報酬",
+      "報いる",
+      "低料金",
+      "委任"
     ]
   },
   "about": {
@@ -63,9 +73,21 @@
         "id": "id4"
       },
       {
-        "copy": "Cardano node v1.18.0",
+        "copy": "Cardano node v1.19.0",
         "icon": "node",
         "id": "id5"
+      }
+    ]
+  },
+  "whyus": {
+    "title": "Why us!",
+    "description": "Looking for reasons to trust us!",
+    "questions": [
+      {
+        "title": "Why delegate to ACE Pool (ACEP)?",
+        "description": "<span>By delegating into Ace Pool not only you are taking a high percentage Return on Staking (ROS), you are also helping the Cardano ecosystem to achieve is main purpose Decentralisation!</span><span>Smaller Pools usually have higher returns, although we might shoot for the stars, ACE POOL always try to put in place incentives to leverage the amount on stake in our Pool(s) so delegators can get optimal ROS!</span>",
+        "icon": "question",
+        "id": "id1"
       }
     ]
   },
@@ -84,12 +106,6 @@
         "description": "Delegation is the process by which ada holders delegate the stake associated with their ada to a stake pool. It allows ada holders that do not have the skills or desire to run a node to participate in the network and be rewarded in proportion to the amount of stake delegated",
         "icon": "calendar",
         "id": "id2"
-      },
-      {
-        "title": "Why delegate to ACE Pool (ACEP)?",
-        "description": "<span>By delegating into Ace Pool not only you are taking a high percentage Return on Staking, you are also helping the Cardano ecosystem to achieve is main purpose Decentralisation!</span><span>Smaller Pools usually have higher ROS, although we might shoot for the stars, ACE POOL always try to put in place incentives to leverage the amount on stake in our Pool(s) so delegators can get optimal ROS!</span>",
-        "icon": "question",
-        "id": "id3"
       }
     ]
   }
