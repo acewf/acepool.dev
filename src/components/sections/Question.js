@@ -11,10 +11,10 @@ const listOfIcons = {
 };
 
 const Question = ({ data: { title, description, icon } }) => (
-  <div className="col-4">
+  <div className="question">
     <span className="image fit">
       <div className="image--block">
-        <FontAwesomeIcon size="9x" icon={listOfIcons[icon]} />
+        <FontAwesomeIcon size="6x" icon={listOfIcons[icon]} />
       </div>
     </span>
     <h3>{title}</h3>

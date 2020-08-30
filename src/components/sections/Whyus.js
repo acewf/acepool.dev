@@ -2,11 +2,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Question from './Question';
-import '~/assets/scss/faqs.scss';
+import '~/assets/scss/whyus.scss';
 import '~/assets/scss/shared.scss';
 
-const FAQs = ({ data: { title, description, questions } }) => (
-  <section className="listwrapper faqs">
+const WhyUS = ({ data: { title, description, questions } }) => (
+  <section className="listwrapper whyus">
     <div className="wrapper">
       <div className="title__wrapper">
         <header className="major">
@@ -21,12 +21,12 @@ const FAQs = ({ data: { title, description, questions } }) => (
   </section>
 );
 
-FAQs.propTypes = {
+WhyUS.propTypes = {
   data: PropTypes.object
 };
 
-FAQs.defaultProps = {
+WhyUS.defaultProps = {
   data: {}
 };
 
-export default FAQs;
+export default WhyUS;

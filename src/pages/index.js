@@ -5,18 +5,20 @@ import Layout from '~/components/layout';
 import About from '../components/sections/About';
 import TechStake from '../components/sections/TechStake';
 import FAQs from '../components/sections/FAQs';
+import WhyUS from '../components/sections/Whyus';
 import SEO from '../components/SEO';
 // import Notify from '../components/sections/Notify';
 import '~/assets/scss/layout.scss';
 
 const Homepage = ({ data }) => {
-  const { pool: { logo, info, about, stack, faqs, metadata } } = data;
+  const { pool: { logo, info, about, stack, faqs, whyus, metadata } } = data;
 
   return (
     <Layout logo={logo} headerInfo={info} footerInfo={info}>
       <SEO data={metadata} />
       <About about={about} />
       <TechStake data={stack} />
+      <WhyUS data={whyus} />
       <FAQs data={faqs} />
     </Layout>
   );
@@ -40,6 +42,7 @@ export const query = graphql`
     ...PoolAboutData
     ...PoolStackData
     ...PoolFaqsData
+    ...PoolWhysData
     ...PoolMetaData
   }
 `;

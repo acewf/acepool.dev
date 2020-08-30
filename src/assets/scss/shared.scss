@@ -1,0 +1,50 @@
+@import "breakpoints";
+
+.listwrapper{
+  font-size: 0.8em;
+  @include breakpoint(medium) {
+    font-size: 1em;
+  }
+  .wrapper{
+    @include dark(#333);
+    margin: 20px;
+  }
+
+  .title__wrapper{
+    text-align: center;
+    margin: 10px;
+  }
+
+  .image{
+    justify-content: center;
+    align-items: center;
+  }
+  h3{
+    font-size: 1.2em;
+    text-align: center;
+  }
+  span{
+    display: block;
+  }
+  p{
+    margin: auto;
+    line-height: 1.3em;
+    @include breakpoint(small) {
+      max-width: 50%;
+    }
+  }
+
+  .questions__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+    }
+
+    .question{
+      margin:10px;
+    }
+  }
+}
