@@ -2,10 +2,10 @@
 
 .about{
   display: flex;
-  background-color: rgba(144, 144, 144, 0.075);
   grid-column: 3 / span 2;
   grid-row: 1;
   color: #fff;
+  padding: 10px;
 
   & .image--block {
     display: block;
@@ -16,40 +16,41 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 10px;
+    justify-content: center;
 
     @include breakpoint(large) {
-      flex-direction: column-reverse;
+      flex-direction: row;
     }
-  }
 
-  p{
-    font-size: 0.8em;
-    @include breakpoint(medium) {
-      font-size: 1em;
+    p{
+      @include breakpoint(small) {
+        max-width: unset;
+      }
     }
   }
 
   .wrapper{
+    position: relative;
     flex: 1 1 auto;
     justify-content: space-between;
     background-attachment: fixed, fixed, fixed;
     background-image: linear-gradient(180deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 30%, _palette(accent6-alt));
     background-position: top left, center center, center center;
     background-size: auto, cover, cover;
-    filter: drop-shadow(1px 4px 4px black);
     margin: 20px;
-    padding: 10px;
+    padding: 0;
 
-    &::before{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+    box-shadow:shadowify(20, #000);
+
+    .shadow{
+      padding: 30px;
+      box-shadow: inset 0px 0px 8px 3px #0a0a0ade;
       height: 100%;
-      background-color: rgba($color: #000000, $alpha: 0.25);
-      z-index: -1;
+      flex-direction: inherit;
+      display: inherit;
     }
+
 
     header > h2, strong{
       color: #f3f3f3;
@@ -65,18 +66,5 @@
     margin: 20px auto;
     filter: drop-shadow(2px 4px 6px black);
     max-width: 450px;
-
-    @include breakpoint(medium) {
-      width: 200px;
-      position: absolute;
-      right: 20px;
-      top: 20px;
-    }
-    @include breakpoint(large) {
-      width: 400px;
-      position: relative;
-      right: unset;
-      top: unset;
-    }
   }
 }

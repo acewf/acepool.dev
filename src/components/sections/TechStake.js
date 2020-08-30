@@ -16,24 +16,26 @@ const listOfIcons = {
 const TechStake = ({ data: { title, info } }) => (
   <section className="main style2 tech">
     <div className="wrapper">
-      <div className="tech__container">
-        <header className="major">
-          <h2>
-            {title}
-          </h2>
-        </header>
-        <ul>
-          {info.map(({ copy, icon, id }) => (
-            <li key={id}>
-              <FontAwesomeIcon size="1x" icon={listOfIcons[icon]} />
-              <span>{copy}</span>
-            </li>
-          ))
-          }
-        </ul>
-      </div>
-      <div className="centered--flex">
-        <FontAwesomeIcon size="6x" icon={faLayerGroup} />
+      <div className="shadow">
+        <div className="tech__container">
+          <header className="major">
+            <h2>
+              {title}
+            </h2>
+          </header>
+          <ul>
+            {info.map(({ copy, icon, id }) => (
+              <li key={id}>
+                <FontAwesomeIcon size="1x" icon={listOfIcons[icon]} />
+                <span>{copy}</span>
+              </li>
+            ))
+            }
+          </ul>
+        </div>
+        <div className="centered--flex">
+          <FontAwesomeIcon size="6x" icon={faLayerGroup} />
+        </div>
       </div>
     </div>
   </section>

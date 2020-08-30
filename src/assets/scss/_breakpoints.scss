@@ -4,6 +4,83 @@
 @import "libs/skel";
 
 
+@function shadowify($offset, $color) {
+  // this function takes two arguments: an offset (how 3d the button will be)
+  // and a color: we'll use Sass to darken the color to get alternating
+  // box shadow colors.
+
+  // create an empty variable: this will be the string to which we
+  // append our box-shadow values
+  $box-shadow:();
+
+  //loop through however many numbers ($offset)
+  @for $i from 0 through $offset{
+
+    // create the value for the box-shadow visible to the right
+    $percent: percentage(0.035*($i/2.3));
+    $first: $i+1+px $i+px 0px lighten($color, $percent);
+
+    // create the value for the box-shadow visible to the bottom
+
+    $second: $i+px $i+1+px 0px lighten($color, $percent);
+
+    $third: $i*-1+px $i+1+px 0px lighten($color,$percent);
+    $forth: $i+1+px $i*-1+px 0px lighten($color,$percent);
+
+    $fifth: $i+px $i*-1+1+px 0px lighten($color,$percent);
+    $six: $i*-1+px $i*-1+px 0px lighten($color,$percent);
+
+    // add the box shadow visible to the right string to our $box-shadow variable
+    $box-shadow: append($box-shadow, $first, comma);
+
+    // add the box shadow visible to the bottom string to our $box-shadow variable
+    $box-shadow: append($box-shadow, $second, comma);
+
+    $box-shadow: append($box-shadow, $third, comma);
+
+    $box-shadow: append($box-shadow, $forth, comma);
+
+    $box-shadow: append($box-shadow, $fifth, comma);
+
+    $box-shadow: append($box-shadow, $six, comma);
+
+    // $box-shadow: append($box-shadow, $third, comma);
+  }
+  // return the string of all of these values
+  @return $box-shadow;
+}
+
+@function shadowifOut($offset, $color) {
+  // this function takes two arguments: an offset (how 3d the button will be)
+  // and a color: we'll use Sass to darken the color to get alternating
+  // box shadow colors.
+
+  // create an empty variable: this will be the string to which we
+  // append our box-shadow values
+  $box-shadow:();
+
+  //loop through however many numbers ($offset)
+  @for $i from 0 through $offset{
+
+    // create the value for the box-shadow visible to the right
+    $percent: percentage(0.03*($i/2.3));
+    $first: $i+1+px $i+px 0px darken($color, $percent);
+
+    $second: $i+px $i+1+px 0px darken($color, $percent);
+
+    // add the box shadow visible to the right string to our $box-shadow variable
+    $box-shadow: append($box-shadow, $first, comma);
+
+    // add the box shadow visible to the bottom string to our $box-shadow variable
+    $box-shadow: append($box-shadow, $second, comma);
+
+
+    // $box-shadow: append($box-shadow, $third, comma);
+  }
+  // return the string of all of these values
+  @return $box-shadow;
+}
+
 @include skel-breakpoints((
 	xlarge: '(min-width: 1680px)',
 	large: '(min-width: 1280px)',

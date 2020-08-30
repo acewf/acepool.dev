@@ -3,4 +3,36 @@
 .whyus{
   grid-column: 2 / span 3;
   grid-row: 2;
+  padding: 10px;
+
+  .wrapper{
+    background-attachment: fixed, fixed, fixed;
+    background-image: url('../images/overlay2.png'), url('../images/overlay3.svg'), linear-gradient(45deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 30%, _palette(accent6-alt));
+    background-position: top left, center center, center center;
+    background-size: auto, cover, cover;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    height: calc(100% - 20px);
+    padding: 10px;
+
+    filter: drop-shadow(1px 4px 4px black);
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.25);
+      z-index: -1;
+    }
+
+    @include breakpoint(medium) {
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    box-shadow:shadowifOut(10, #4d4d4d);
+  }
 }

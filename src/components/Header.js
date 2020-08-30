@@ -9,15 +9,17 @@ const Header = ({ data }) => {
 
   return (
     <section id="header" className="header">
-      <div className="inner">
-        <div className="imageContainer">
-          <Img fluid={data.image.childImageSharp.fluid} />
+      <div className="shadow">
+        <div className="inner">
+          <div className="imageContainer">
+            <Img fluid={data.image.childImageSharp.fluid} />
+          </div>
+          <h1>{title}</h1>
+          <p dangerouslySetInnerHTML={{ __html: description }} />
+          <ul className="actions">
+            <li><a href="#one" className="button scrolly">Discover</a></li>
+          </ul>
         </div>
-        <h1>{title}</h1>
-        <p dangerouslySetInnerHTML={{ __html: description }} />
-        <ul className="actions">
-          <li><a href="#one" className="button scrolly">Discover</a></li>
-        </ul>
       </div>
     </section>
   );
